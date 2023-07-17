@@ -2,8 +2,25 @@
   "containerEnv": {
     "GH_TOKEN": "${localEnv:GH_TOKEN}"
   },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "json.format.enable": false,
+        "prettier.documentSelectors": [
+          "**/*.json",
+          "**/*.md",
+          "**/*.yaml",
+          "**/*.yml"
+        ]
+      }
+    }
+  },
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/prettier:1": {}
   },
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "initializeCommand": ".devcontainer/initialize.sh",
