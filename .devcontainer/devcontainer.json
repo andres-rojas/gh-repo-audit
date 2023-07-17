@@ -1,0 +1,18 @@
+{
+  "containerEnv": {
+    "GH_TOKEN": "${localEnv:GH_TOKEN}"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+  },
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "initializeCommand": ".devcontainer/initialize.sh",
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}/.config/gh",
+      "target": "/.config/gh",
+      "type": "bind"
+    }
+  ],
+  "postCreateCommand": ".devcontainer/postCreate.sh"
+}
