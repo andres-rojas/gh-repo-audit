@@ -5,7 +5,7 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
   },
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "initializeCommand": ".devcontainer/initialize.sh",
   "mounts": [
     {
